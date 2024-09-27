@@ -20,7 +20,7 @@
             <a href="#" class="item">Аналитическая геометрия</a>
         </div>
 
-        <h1>1.1 Аффинные пространства</h1>
+        <h1>1.1 Шаблон</h1>
 
         <div class="authors">
             <div class="title">Авторы:</div>
@@ -30,14 +30,44 @@
             </div>
         </div>
 
+        <h2>1.1.1 Текст и Tex формулы</h2>
+
         <p>
             Пусть задано множество <span class="tex">\mathscr{A}</span>, элементы которго будем называть точками.  
-            <span class="tex">\mathscr{A}</span> называют <u>аффинным пространством</u>, если для него задано векторное 
+            <span class="tex">\mathscr{A}</span> называют <i>аффинным пространством</i>, если для него задано векторное 
             пространство <span class="tex">V</span>, называемое ассоциированным векторным пространством с аффинным пространством 
             <span class="tex">\mathscr{A}</span> и отображение <span class="tex">\to : \mathscr{A} \times \mathscr{A} \to V</span>, 
             сопоставляющее любым двум точкам из <span class="tex">A, B \in \mathscr{A}</span> некоторый вектор 
             <span class="tex">a \in V</span>, обозначаемый <span class="tex">\overrightarrow{AB}</span>,  c началом в 
             <span class="tex">A</span> и концом в <span class="tex">B</span>, и удовлетворяющее следующим аксиомам:
+        </p>
+
+        <p>
+            <ol>
+                <li>
+                    <span class="tex">\forall A \in \mathscr{A}</span> и 
+                    <span class="tex">\forall a \in V \ \ \ \exists ! \ B \in \mathscr{A} : \overrightarrow{AB} = a</span>
+                </li>
+                <li>
+                    <span class="tex">\forall A,B,C \in \mathscr{A}</span> верно, что 
+                    <span class="tex">\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}</span>
+                </li>
+            </ol>
+
+            <span class="tex">dim \ \mathscr{A} := dim \ V</span>
+        </p>
+
+        <h2>1.1.2 Стилизация текста и большие формулы</h2>
+
+        <p>
+            Наиболее часто определение предела функции формулируют на <u>языке окрестностей</u>. 
+            То, что предел функции рассматривается только в точках, предельных для области 
+            определения функции, означает, что в любой окрестности данной точки существуют 
+            точки области определения. Это позволяет говорить о стремлении аргумента функции 
+            к данной точке. При этом предельная точка области определения не обязана принадлежать 
+            самой области определения: например, можно рассматривать предел функции на концах
+            открытого интервала, на котором определена функция (сами концы интервала 
+            в область определения не входят).
         </p>
 
         <p class="t-large">
@@ -46,8 +76,15 @@
                 \left[ 0 \lt \left| x - a \right| \lt { \color{green} \delta } \Rightarrow 
                 \left| f(x) - A \right| \lt { \color{orange} \varepsilon } \right]
             </span>
+            <span class="tag">(1)</span>
         </p>
 
+        <p>
+            Значение <span class="tex">A</span> называется пределом (предельным значением) функции <span class="tex">f(x)</span> 
+            в точке <span class="tex">a</span> если для любого положительного числа <span class="tex">\color{orange} \varepsilon</span> 
+            можно подобрать соответствующее ему положительное число <span class="tex">{ \color{green} \delta }</span> такое, что для всех аргументов 
+            <span class="tex">x</span> удовлетворяющих условию выполняется неравенство (1).
+        </p>
 
     </div>
 

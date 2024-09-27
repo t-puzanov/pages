@@ -18,16 +18,16 @@ h1 {
     margin: 0.67em 0;
 }
 
+h2 {
+    font-size: 28px;
+}
+
 p {
     font-size: 16px;
     font-family: "OpenSans";
     font-weight: 400;
     color: #323232;
     line-height: 130%;
-}
-
-p.space-large {
-    padding: 10px 0px;
 }
 
 a, div {
@@ -44,11 +44,20 @@ span.tex.showed {
 }
 
 p.t-large {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
     overflow-x: auto;
 }
 
 p.t-large > span.tex {
     font-size: 25px;
+}
+
+p.t-large > .tag {
+    margin-left: auto;
+    font-size: 26px;
+    padding-left: 20px;
 }
 
 .container {
