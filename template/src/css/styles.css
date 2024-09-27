@@ -1,8 +1,8 @@
-* {
+/* * {
     font-family: 'OpenSans';
     font-weight: 400;
     color: #323232;
-}
+} */
 
 body {
     background-color: #ffffff;
@@ -26,8 +26,29 @@ p {
     line-height: 130%;
 }
 
+p.space-large {
+    padding: 10px 0px;
+}
+
+a, div {
+    font-family: "OpenSans";
+}
+
 span.tex {
     color: transparent;
+}
+
+span.tex.showed {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #323232;
+}
+
+p.t-large {
+    overflow-x: auto;
+}
+
+p.t-large > span.tex {
+    font-size: 25px;
 }
 
 .container {
@@ -40,21 +61,26 @@ span.tex {
     box-sizing: border-box;
 
     padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .container > .nav {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .container > .nav > .item {
     text-decoration: none;
+    text-wrap: nowrap;
     font-size: 16px;
+    color: #323232;
 }
 
 .container > .nav > .slash {
     padding: 0px 4px;
     font-size: 18px;
+    font-weight: 500;
 }
 
 .container > .authors {
@@ -86,14 +112,14 @@ span.tex {
     font-weight: 500;
 }
 
-@media (max-width: 1300px) and (min-width: 600px) {
+@media (max-width: 1300px) and (min-width: 700px) {
     .container {
         padding-left: 15%;
         padding-right: 15%;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .container {
         padding-left: 8%;
         padding-right: 8%;

@@ -32,13 +32,23 @@
 
         <p>
             Пусть задано множество <span class="tex">\mathscr{A}</span>, элементы которго будем называть точками.  
-            <span class="tex">\mathscr{A}</span> называют аффинным пространством, если для него задано векторное 
+            <span class="tex">\mathscr{A}</span> называют <u>аффинным пространством</u>, если для него задано векторное 
             пространство <span class="tex">V</span>, называемое ассоциированным векторным пространством с аффинным пространством 
             <span class="tex">\mathscr{A}</span> и отображение <span class="tex">\to : \mathscr{A} \times \mathscr{A} \to V</span>, 
             сопоставляющее любым двум точкам из <span class="tex">A, B \in \mathscr{A}</span> некоторый вектор 
             <span class="tex">a \in V</span>, обозначаемый <span class="tex">\overrightarrow{AB}</span>,  c началом в 
             <span class="tex">A</span> и концом в <span class="tex">B</span>, и удовлетворяющее следующим аксиомам:
         </p>
+
+        <p class="t-large">
+            <span class="tex">
+                \forall { \color{orange} \varepsilon } \gt 0 \  \exists \ { \color{green} \delta } > 0 : 
+                \left[ 0 \lt \left| x - a \right| \lt { \color{green} \delta } \Rightarrow 
+                \left| f(x) - A \right| \lt { \color{orange} \varepsilon } \right]
+            </span>
+        </p>
+
+
     </div>
 
     <script src="src/lib/katex/katex.min.js"></script>

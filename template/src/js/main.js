@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let text = el.textContent;
 
+        el.classList.add("showed");
         el.innerHTML = "";
 
         katex.render(text, el, {
