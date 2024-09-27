@@ -4,6 +4,10 @@
     color: #323232;
 } */
 
+* {
+    transition: 0.1s;
+}
+
 body {
     background-color: #ffffff;
 }
