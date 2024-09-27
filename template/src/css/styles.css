@@ -26,6 +26,10 @@ p {
     line-height: 130%;
 }
 
+span.tex {
+    color: transparent;
+}
+
 .container {
     width: 100%;
     min-height: 100px;

@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интерактивный конспект</title>
 
-    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/lib/normalize/normalize.css">
+    <link rel="stylesheet" href="src/lib/katex/katex.min.css">
     <link rel="stylesheet" href="src/fonts/open_sans/import.css">
-    <link rel="stylesheet" href="src/fonts/roboto/import.css">
-    <link rel="stylesheet" href="src/fonts/roboto_mono/import.css">
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
@@ -17,11 +16,11 @@
         <div class="nav">
             <a href="#" class="item">Главная</a><div class="slash">/</div>
             <a href="#" class="item">Конспекты</a><div class="slash">/</div>
-            <a href="#" class="item">2 курс</a><div class="slash">/</div>
-            <a href="#" class="item">Мат. анализ</a>
+            <a href="#" class="item">1 курс</a><div class="slash">/</div>
+            <a href="#" class="item">Аналитическая геометрия</a>
         </div>
 
-        <h1>1.1 Метрические пространства</h1>
+        <h1>1.1 Аффинные пространства</h1>
 
         <div class="authors">
             <div class="title">Авторы:</div>
@@ -32,18 +31,17 @@
         </div>
 
         <p>
-            Сложно сказать, почему непосредственные участники технического прогресса 
-            могут быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу! 
-            И нет сомнений, что активно развивающиеся страны третьего мира призывают нас к новым свершениям, 
-            которые, в свою очередь, должны быть объявлены нарушающими общечеловеческие нормы этики и морали.
-            <br><br>
-             
-            Сложно сказать, почему интерактивные прототипы объективно рассмотрены соответствующими инстанциями. 
-            Однозначно, представители современных социальных резервов являются только методом политического участия 
-            и ассоциативно распределены по отраслям. Внезапно, некоторые особенности внутренней политики 
-            лишь добавляют фракционных разногласий и рассмотрены исключительно в разрезе
-             маркетинговых и финансовых предпосылок.
+            Пусть задано множество <span class="tex">\mathscr{A}</span>, элементы которго будем называть точками.  
+            <span class="tex">\mathscr{A}</span> называют аффинным пространством, если для него задано векторное 
+            пространство <span class="tex">V</span>, называемое ассоциированным векторным пространством с аффинным пространством 
+            <span class="tex">\mathscr{A}</span> и отображение <span class="tex">\to : \mathscr{A} \times \mathscr{A} \to V</span>, 
+            сопоставляющее любым двум точкам из <span class="tex">A, B \in \mathscr{A}</span> некоторый вектор 
+            <span class="tex">a \in V</span>, обозначаемый <span class="tex">\overrightarrow{AB}</span>,  c началом в 
+            <span class="tex">A</span> и концом в <span class="tex">B</span>, и удовлетворяющее следующим аксиомам:
         </p>
     </div>
+
+    <script src="src/lib/katex/katex.min.js"></script>
+    <script src="src/js/main.js"></script>
 </body>
 </html>
