@@ -1,0 +1,97 @@
+* {
+    font-family: 'OpenSans';
+    font-weight: 400;
+    color: #323232;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+h1, h2, h3 {
+    font-family: "OpenSans";
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 46px;
+    margin: 0.67em 0;
+}
+
+p {
+    font-size: 16px;
+    font-family: "OpenSans";
+    font-weight: 400;
+    color: #323232;
+    line-height: 130%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100px;
+
+    background-color: #ffffff;
+    padding: 0px 22%;
+
+    box-sizing: border-box;
+
+    padding-top: 30px;
+}
+
+.container > .nav {
+    display: flex;
+    align-items: center;
+}
+
+.container > .nav > .item {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container > .nav > .slash {
+    padding: 0px 4px;
+    font-size: 18px;
+}
+
+.container > .authors {
+    width: 100%;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+}
+
+.container > .authors > .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #323232;
+    padding-right: 25px;
+}
+
+.container > .authors > .item {
+    display: flex;
+    align-items: center;
+}
+
+.container > .authors > .item > .image {
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.container > .authors > .item > .name {
+    font-weight: 500;
+}
+
+@media (max-width: 1300px) and (min-width: 600px) {
+    .container {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
