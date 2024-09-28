@@ -215,6 +215,29 @@ ul.s-middle > li, ol.s-middle > li {
     transition: all 0.5s ease;
 }
 
+p::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+p::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+}
+
+p::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+}
+
+p::-webkit-scrollbar-thumb:hover{
+    background: rgba(0,0,0,0.4);
+}
+
+p::-webkit-scrollbar-thumb:active{
+    background: rgba(0,0,0,.9);
+}
+
 @media (max-width: 1300px) and (min-width: 700px) {
     .container {
         padding-left: 15%;
