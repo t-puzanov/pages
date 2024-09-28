@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный конспект</title>
+
+    <link rel="stylesheet" href="../../../../templates/note/src/lib/normalize/normalize.css">
+    <link rel="stylesheet" href="../../../../templates/note/src/lib/katex/katex.min.css">
+    <link rel="stylesheet" href="../../../../templates/note/src/fonts/open_sans/import.css">
+    <link rel="stylesheet" href="../../../../templates/note/src/css/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav">
+            <a href="#" class="item">Главная</a><div class="slash">/</div>
+            <a href="#" class="item">Конспекты</a><div class="slash">/</div>
+            <a href="#" class="item">1 курс</a><div class="slash">/</div>
+            <a href="#" class="item">Аналитическая геометрия</a>
+        </div>
+
+        <h1>1.1 Метрические пространства</h1>
+
+        <div class="authors">
+            <div class="title">Авторы:</div>
+            <div class="item">
+                <img 
+                    class="image" style="width: 48px; height: 48px;" 
+                    src="../../../../templates/note/src/img/avatar.png" alt="#"
+                >
+                <div class="name">Пузанов Тамир</div>
+            </div>
+        </div>
+
+        <p>
+            <b>Определение.</b> Произвольное множество <span class="tex">M</span> называют <i>метрическим пространством</i>,
+            если на нем задано отображение <span class="tex">\rho : M^2 \to \mathbb{R}</span>,
+            удовлетворяющее следующим аксиомам:
+
+            <ol>
+                <li><span class="tex">\forall x, y \in M \ \ \rho \left( x, y \right) = 0  \Leftrightarrow x = y</span></li>
+                <li><span class="tex">\forall x, y \in M \ \ \rho \left( x, y \right) = \rho \left( y, x \right)</span></li>
+                <li><span class="tex">\forall x, y, z \in M \ \ \rho \left( x, y \right) \le \rho \left( x, z \right) + \rho \left( z, y \right)</span></li>
+            </ol>
+
+            Отображение <span class="tex">\rho</span> называют <i>метрикой</i> пространства <span class="tex">M</span>. 
+            Далее, если <span class="tex">M_{\rho}</span> - метрическое пространство, то имеется в виду, что
+            на множестве <span class="tex">M</span> задана метрика <span class="tex">\rho</span>.
+        </p>
+
+        <p>
+            <b>Предложение.</b> Метрика произвольного пространства <span class="tex">M_{\rho}</span> 
+            всегда принимает положительные значения.
+
+            <div class="proof hidden">
+                <div class="head">
+                    <div class="icon"></div>
+                    <div class="title">
+                        Док-во (не открывайте сразу; сначала подумайте сами!)
+                    </div>
+                </div>
+                <div class="content">
+                    Пусть <span class="tex">M_{\rho}</span> - метрическое пространство. 
+                    Из 3 аксиомы метрического пространства следует, что для любых элементов 
+                    <span class="tex">{ \color{blue} x }</span> и <span class="tex">{ \color{green} z }</span> 
+                    пространства <span class="tex">M</span> выполнено неравенство:
+
+                    <p class="t-middle b-small">
+                        <span class="tex">
+                            \rho \left( { \color{blue} x }, { \color{blue} x } \right) \le 
+                            \rho \left( { \color{blue} x }, { \color{green} z } \right) + \rho \left( { \color{green} z }, { \color{blue} x } \right)
+                        </span>
+                    </p>
+
+                    <p>
+                        Заметим, что <span class="tex">\rho \left( { \color{blue} x }, { \color{blue} x } \right) = 0</span> 
+                        по 1 аксиоме м.п. и <span class="tex">\rho \left( { \color{blue} x }, { \color{green} z } \right) = 
+                        \rho \left( { \color{green} z }, { \color{blue} x } \right)</span> по 2 аксиоме.
+                    </p>
+
+                    <p class="t-middle b-small">
+                        <span class="tex">
+                            2 \rho \left( { \color{blue} x }, { \color{green} z } \right) \ge 0
+                        </span>
+                    </p>
+
+                    <p>
+                        Получим
+                    </p>
+
+                    <p class="t-middle b-small">
+                        <span class="tex">
+                            \forall { \color{blue} x }, { \color{green} z } \in M_{\rho} 
+                            \ \ \rho \left( { \color{blue} x }, { \color{green} z } \right) \ge 0
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </p>
+    </div>
+
+    <script src="../../../../templates/note/src/lib/katex/katex.min.js"></script>
+    <script src="../../../../templates/note/src/js/main.js"></script>
+</body>
+</html>

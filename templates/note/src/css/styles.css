@@ -50,6 +50,10 @@ p.t-large {
     overflow-x: auto;
 }
 
+p.b-small {
+    padding: 4px 0px;
+}
+
 p.t-large > span.tex {
     font-size: 25px;
 }
@@ -148,6 +152,64 @@ ul > li {
     padding-bottom: 5px;
 }
 
+.proof {
+    width: 100%;
+    padding: 18px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.proof.hidden > .content {
+    opacity: 0;
+    display: none;
+    margin: 0px;
+}
+
+.proof > .head {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.proof > .head:hover {
+    text-decoration: underline;
+}
+
+.proof > .head > .icon {
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+}
+
+.proof.hidden > .head > .icon {
+    transform: rotate(0deg);
+}
+
+.proof > .head > .title {
+    font-weight: 700;
+}
+
+.proof.hidden:hover {
+    cursor: pointer;
+}
+
+.proof.hidden:hover > .head {
+    text-decoration: underline;
+}
+
+.proof > .head > .icon {
+    width: 0; 
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #323232;
+    margin-right: 10px;
+}
+
+.proof > .content {
+    margin-top: 16px;
+    transition: all 0.5s ease;
+}
+
 @media (max-width: 1300px) and (min-width: 700px) {
     .container {
         padding-left: 15%;
@@ -156,6 +218,11 @@ ul > li {
 }
 
 @media (max-width: 700px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
     .container {
         padding-left: 8%;
         padding-right: 8%;
