@@ -47,7 +47,7 @@ p.t-large {
     display: flex;
     align-items: center;
     padding: 10px 0px;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
     overflow-x: auto;
 }
 
