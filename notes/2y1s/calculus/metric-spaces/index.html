@@ -66,7 +66,7 @@
                     Пусть <span class="tex">M_{\rho}</span> - метрическое пространство. 
                     Из 3 аксиомы метрического пространства следует, что для любых элементов 
                     <span class="tex">{ \color{blue} x }</span> и <span class="tex">{ \color{green} z }</span> 
-                    пространства <span class="tex">M</span> выполнено неравенство:
+                    множества <span class="tex">M</span> выполнено неравенство:
 
                     <p class="t-middle b-small">
                         <span class="tex">
@@ -180,6 +180,127 @@
                     </p>
                 </li>
             </ol>
+        </p>
+
+        <h2>Нормированные векторные пространства</h2>
+
+        <p>
+            <b>Определение.</b> Векторное пространство <span class="tex">V</span>
+            называют <i>нормированным пространством</i>, если на нём определено отображение  
+            <span class="tex">\left\|  \right\| : V \to \mathbb{R}</span>, обладающее следующими свойствами:
+
+            <ol>
+                <li>
+                    <span class="tex">
+                        \forall x \in V \ \left\| x \right\| \ge 0; \ \left\| x \right\| = 0
+                         \Leftrightarrow x = \overline{0} \ \
+                    </span>
+                    (положительная определённость)
+                </li>
+                <li>
+                    <span class="tex">
+                        \forall x \in V \ \forall \lambda \in \mathbb{R} \ \
+                        \left\| \lambda x \right\| = \left| \lambda \right| \cdot \left\| x \right\| \ \
+                    </span>
+                    (однородность)
+                </li>
+                <li>
+                    <span class="tex">
+                        \forall x, y \in V \
+                        \left\| x + y \right\| \le \left\| x \right\| + \left\| y \right\| \ \
+                    </span>
+                    (неравенство треугольника)
+                </li>
+            </ol>
+
+            <b>Примеры нормированных пространств.</b> 
+
+            <ul>
+                <li>
+                    Пусть <span class="tex">V = \mathbb{R}^{n} \ \left( \forall n \in \mathbb{N} \right);</span>
+                    <span class="tex">\ \ \forall x \in V \ \ x = \left( x_1, \dots, x_n \right)</span>
+                    <p class="t-middle" style="margin: 0px">
+                        <span class="tex dmode">\left\| x \right\| = \sqrt{\sum_{k=1}^{n}x^2_k}</span>
+                    </p>
+                </li>
+                <li>
+                    Пусть <span class="tex">V = \mathbb{R}^{n} \ \left( \forall n \in \mathbb{N} \right);</span>
+                    <span class="tex">\ \ \forall x \in V \ \ x = \left( x_1, \dots, x_n \right)</span>
+                    <p class="t-middle" style="margin: 0px">
+                        <span class="tex dmode">\left\| x \right\| = \underset{1 \le k \le n}{max} \left| x_k \right|</span>
+                    </p>
+                </li>
+                <li>
+                    Пусть <span class="tex">V</span> - евклидово пространство и 
+                    <span class="tex">\ \forall x, y \in V \ \left\langle x, y \right\rangle</span> 
+                    - скалярное произведение векторов.
+                    <p class="t-middle" style="margin: 0px">
+                        <span class="tex dmode">\left\| x \right\| = \sqrt{\left\langle x, x \right\rangle}</span>
+                    </p>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            <b>Теорема.</b> Пусть <span class="tex">V</span> - Нормированное пространство. Определим функцию
+            <span class="tex">\rho \left( x, y \right) = \left\| x - y \right\|.</span>
+            Тогда <span class="tex">V_{\rho}</span> - метрическое пространство.
+
+            <div class="proof">
+                <div class="head">
+                    <div class="icon"></div>
+                    <div class="title">Док-во (не открывайте сразу; сначала подумайте сами!)</div>
+                </div>
+                <div class="content">
+                    Покажем, что для функции <span class="tex">\rho</span> справедливы
+                    аксиомы метрического пространства:
+
+                    <ol class="s-middle">
+                        <li>
+                            Пусть <span class="tex">{ \color{blue} x }, { \color{green} y } \in V</span>, тогда
+
+                            <p class="t-middle" style="margin: 4px 0px;">
+                                <span class="tex">
+                                    \rho \left( { \color{blue} x }, { \color{green} y } \right) = 
+                                    \left\| { \color{blue} x } - { \color{green} y } \right\| = 0 
+                                    \Leftrightarrow { \color{blue} x } - { \color{green} y } = \overline{0} 
+                                    \Leftrightarrow { \color{blue} x } = { \color{green} y }
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            Пусть <span class="tex">{ \color{blue} x }, { \color{green} y } \in V</span>, тогда
+
+                            <p class="t-middle" style="margin: 4px 0px;">
+                                <span class="tex">
+                                    \rho \left( { \color{blue} x }, { \color{green} y } \right) = 
+                                    \left\| { \color{blue} x } - { \color{green} y } \right\| = 
+                                    \left\| -1 \left( { \color{blue} y } - { \color{green} x } \right) \right\| =
+                                    \left| -1 \right| \cdot \left\| { \color{blue} y } - { \color{green} x } \right\| =
+                                    \left\| { \color{blue} y } - { \color{green} x } \right\| =
+                                    \rho \left( { \color{blue} y }, { \color{green} x } \right)
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            Пусть <span class="tex">{ \color{blue} x }, { \color{green} y }, { \color{red} z } \in V</span>, тогда
+
+                            <p class="t-middle" style="margin: 4px 0px;"></p>
+                                <span class="tex">
+                                    \rho \left( { \color{blue} x }, { \color{green} y } \right) = 
+                                    \left\| { \color{blue} x } - { \color{green} y } \right\| = 
+                                    \left\| \left( { \color{blue} x } - { \color{red} z } \right) + 
+                                    \left( { \color{red} z } - { \color{green} y } \right) \right\| \le
+                                    \left\| { \color{blue} x } - { \color{red} z } \right\| + 
+                                    \left\| { \color{red} z } - { \color{green} y } \right\| = 
+                                    \rho \left( { \color{blue} x }, { \color{red} z } \right) +
+                                    \rho \left( { \color{red} z }, { \color{green} y } \right)
+                                </span>
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </p>
     </div>
 
