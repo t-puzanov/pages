@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         el.innerHTML = "";
 
         katex.render(text, el, {
+            displayMode: el.classList.contains("dmode"),
             throwOnError: false
         });
     }
