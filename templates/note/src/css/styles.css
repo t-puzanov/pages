@@ -152,6 +152,10 @@ ul > li {
     padding-bottom: 5px;
 }
 
+ul.s-middle > li, ol.s-middle > li {
+    margin-bottom: 8px;
+}
+
 .proof {
     /* width: 100%; */
     padding: 18px;

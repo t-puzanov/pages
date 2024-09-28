@@ -33,6 +33,8 @@
             </div>
         </div>
 
+        <h2>Метрическое пространство.</h2>
+
         <p>
             <b>Определение.</b> Произвольное множество <span class="tex">M</span> называют <i>метрическим пространством</i>,
             если на нем задано отображение <span class="tex">\rho : M^2 \to \mathbb{R}</span>,
@@ -97,6 +99,87 @@
                     </p>
                 </div>
             </div>
+        </p>
+
+        <h2>Примеры метрических пространств.</h2>
+        
+        <p>
+            <ol class="s-middle">
+                <li>
+                    Пусть <span class="tex">M</span> - произвольное множество.
+
+                    <p class="t-middle b-small">
+                        <span class="tex">
+                            \rho \left( x, y \right) = 
+                            \left\{ \begin{aligned} 
+                            1, \ x \neq y \\
+                            0, \ x = y
+                            \end{aligned} \right.
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    Пусть <span class="tex">M</span> - произвольное подмножество <span class="tex">\mathbb{R}</span>.
+
+                    <p class="t-middle b-small">
+                        <span class="tex">
+                            \rho \left( x, y \right) = \left| x - y \right|
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <span class="tex">
+                        \forall n \in \mathbb{N} \ \ M = \mathbb{R}^{n} \ \
+                        x = \left( x_1, \dots, x_n \right), \ y = \left( y_1, \dots, y_n \right)
+                    </span>
+
+                    <p class="t-middle b-small" style="padding: 0px; margin: 0px;">
+                        <span class="tex dmode">
+                            \rho \left( x, y \right) = \sqrt[p]{\sum_{k=1}^{n} \left| x_k - y_k \right| ^ p}, \ \ p \geqslant 1
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <span class="tex">
+                        \forall n \in \mathbb{N} \ \ M = \mathbb{R}^{n} \ \
+                        x = \left( x_1, \dots, x_n \right), \ y = \left( y_1, \dots, y_n \right)
+                    </span>
+
+                    <p class="t-middle b-small" style="padding: 0px; margin: 0px;">
+                        <span class="tex dmode">
+                            \rho \left( x, y \right) = \underset{1 \le k \le n}{max} \left| x_k - y_k \right|
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <span class="tex">
+                        \forall a, b \in \mathbb{R} : a \lt b \ \ M = C \left[ a, b \right]
+                    </span>.
+
+                    <span class="tex">\ M</span> - множество непрерывных функций, определенных на
+                    <span class="tex">\left[ a, b \right]</span>.
+
+                    <p class="t-middle b-small">
+                        <span class="tex">
+                            \forall f, g \in M \ \ \rho(f,g) = \underset{x \in \left[ a, b \right]}{max} \left| f \left( x \right) - g \left( x \right) \right|
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <span class="tex">
+                        \forall a, b \in \mathbb{R} : a \lt b
+                    </span>.
+
+                    <span class="tex">\ M</span> - множество интегрируемых функций на
+                    <span class="tex">\left[ a, b \right]</span>.
+
+                    <p class="t-middle b-small" style="margin: 0px;">
+                        <span class="tex dmode">
+                            \forall f, g \in M \ \ \rho(f,g) = \int_{a}^{b} \left| f \left( x \right) - g \left( x \right) \right| dx
+                        </span>
+                    </p>
+                </li>
+            </ol>
         </p>
     </div>
 
