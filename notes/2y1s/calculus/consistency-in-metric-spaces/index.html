@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2 Последовательности в метрических пространствах | Интерактивный конспект</title>
+
+    <link rel="stylesheet" href="../../../../templates/note/src/lib/normalize/normalize.css">
+    <link rel="stylesheet" href="../../../../templates/note/src/lib/katex/katex.min.css">
+    <link rel="stylesheet" href="../../../../templates/note/src/fonts/open_sans/import.css">
+    <link rel="stylesheet" href="../../../../templates/note/src/css/styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav">
+            <a href="#" class="item">Главная</a><div class="slash">/</div>
+            <a href="#" class="item">Конспекты</a><div class="slash">/</div>
+            <a href="#" class="item">2 курс, 1 семестр</a><div class="slash">/</div>
+            <a href="#" class="item">Мат. анализ</a>
+        </div>
+
+        <h1>1.2 Послед&shy;ователь&shy;ности в мет&shy;ричес&shy;ких прост&shy;ранст&shy;вах</h1>
+
+        <div class="authors">
+            <div class="title">Авторы:</div>
+            <div class="item">
+                <img 
+                    class="image" style="width: 48px; height: 48px;" 
+                    src="../../../../templates/note/src/img/avatar.png" alt="#"
+                >
+                <div class="name">Пузанов Тамир</div>
+            </div>
+        </div>
+
+        <h2>Послед&shy;ователь&shy;ность и ее предел.</h2>
+
+        <p>
+            <b>Определение.</b> Пусть <span class="tex">M</span> - метрическое пространство.
+            Нумерованный набор, состоящий из элементов множества <span class="tex">M</span> называют
+            <i>последовательностью</i>. Более формально последовательность можно определить как
+            отображение <span class="tex">s : \mathbb{N} \to M</span> множества натуральных чисел 
+            в заданное множество M. Образ натурального числа <span class="tex">n</span>, а именно элемент
+            <span class="tex">x^{(n)} := s(n)</span> называется <i><span class="tex">n</span>-м членом последовательности</i>, 
+            а порядковый номер члена последовательности - его <i>индексом</i>.
+        </p>
+
+        <p>
+            Далее произвольная последовательность будет обозначаться как 
+            <span class="tex">\left\{ x^{(n)} \right\}^{\infty}_{n=1}</span> или просто <span class="tex">x^{(n)}</span>.
+        </p>
+
+        <p>
+            <b>Определение.</b> Пусть <span class="tex">M_{\rho}</span> - метрическое пространство,
+            <span class="tex">x^{(n)}</span> - произвольная последовательность из элементов
+            множества <span class="tex">M</span>. Элемент <span class="tex">a \in M</span> называется
+            <i>пределом последовательности</i> <span class="tex">x^{(n)}</span>, если 
+        </p>
+
+        <p class="t-large">
+            <span class="tex">
+                \forall {\color{red} \varepsilon} \gt 0 \ \ \exists \ {\color{blue} n_0} \in\mathbb{N} :
+                \forall {\color{green} n} \in \mathbb{N} \ \ \left[ {\color{green} n} \ge {\color{blue} n_0}
+                \Rightarrow \rho (x^{({\color{green} n})}, a) \le {\color{red} \varepsilon} \right]
+            </span>
+        </p>
+
+        <p>
+            или если <span class="tex">\ \rho (x^{(n)}, a) \underset{n \to \infty }{\longrightarrow} 0</span>.
+        </p>
+
+        <p>
+            Если <span class="tex">a \in M</span> является пределом последовательности <span class="tex">x^{(n)}</span>,
+            то пишут <span class="tex">\underset{n \to \infty}{lim} \ x^{(n)} = a</span>.
+        </p>
+
+        <p>
+            <b>Теорема.</b> 
+
+            Произвольная последовательность может иметь не более одного предела.
+
+            <div class="proof">
+                <div class="head">
+                    <div class="icon"></div>
+                    <div class="title">Док-во (не открывайте сразу; сначала подумайте сами!)</div>
+                </div>
+                <div class="content">
+                    Пусть <span class="tex">M_{\rho}</span> - метрическое пространство, 
+                    <span class="tex">x^{(n)}</span> - последовательность. И элементы 
+                    <span class="tex">{\color{blue} a}, {\color{red} b} \in M</span> 
+                    являются пределами последовательности <span class="tex">x^{(n)}</span>,
+                    т.е. <span class="tex">\underset{n \to \infty}{lim} \ x^{(n)} = {\color{blue} a}</span> 
+                    и <span class="tex">\underset{n \to \infty}{lim} \ x^{(n)} = {\color{red} b}</span>. Тогда
+
+                    <p class="t-large" style="margin: 0px;">
+                        <span class="tex" style="margin: 0px">
+                            \forall {\color{orange} k} \in \mathbb{N} \ \ 0 \le 
+                            \rho ({\color{blue} a}, {\color{red} b}) \le
+                            \rho ({\color{blue} a}, x^{({\color{orange} k})}) + \rho (x^{({\color{orange} k})}, {\color{red} b})
+                        </span>
+                    </p>
+
+                    Перейдя в неравенстве к пределам, получим:
+
+                    <p class="t-large" style="margin: 0px;">
+                        <span class="tex" style="margin: 0px"> 
+                            0 \le \underset{{\color{orange} k} \to \infty}{lim} \rho ({\color{blue} a}, 
+                            {\color{red} b}) \le \underset{{\color{orange} k} \to \infty}{lim}
+                            ( \rho ({\color{blue} a}, x^{({\color{orange} k})}) + 
+                            \rho (x^{({\color{orange} k})}, {\color{red} b}) )
+                        </span>
+                    </p>
+                    <p class="t-large" style="margin: 0px;">
+                        <span class="tex" style="margin: 0px"> 
+                            0 \le \rho ({\color{blue} a}, 
+                            {\color{red} b}) \le \underset{{\color{orange} k} \to \infty}{lim}
+                            \rho ({\color{blue} a}, x^{({\color{orange} k})}) + 
+                            \underset{{\color{orange} k} \to \infty}{lim}
+                            \rho (x^{({\color{orange} k})}, {\color{red} b})
+                        </span>
+                    </p>
+                    <p class="t-large" style="margin: 0px;">
+                        <span class="tex" style="margin: 0px"> 
+                            0 \le \rho ({\color{blue} a}, 
+                            {\color{red} b}) \le 0 + 0 = 0
+                        </span>
+                    </p>
+
+                    Из последнего следует, что <span class="tex">\rho ({\color{blue} a}, {\color{red} b}) = 0</span>
+                    <span class="tex">\Leftrightarrow {\color{blue} a} = {\color{red} b}</span>.
+
+                    <p>
+                        Получим, что если последовательность имеет несколько пределов, то они необходимо равны. Это утверждение доказывает теорему.
+                    </p>
+                </div>
+            </div>
+        </p>
+    </div>
+
+    <script src="../../../../templates/note/src/lib/katex/katex.min.js"></script>
+    <script src="../../../../templates/note/src/js/main.js"></script>
+</body>
+</html>
