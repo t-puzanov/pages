@@ -40,7 +40,7 @@
             Нумерованный набор, состоящий из элементов множества <span class="tex">M</span> называют
             <i>последовательностью</i>. Более формально последовательность можно определить как
             отображение <span class="tex">s : \mathbb{N} \to M</span> множества натуральных чисел 
-            в заданное множество M. Образ натурального числа <span class="tex">n</span>, а именно элемент
+            в заданное множество <span class="tex">M</span>. Образ натурального числа <span class="tex">n</span>, а именно элемент
             <span class="tex">x^{(n)} := s(n)</span> называется <i><span class="tex">n</span>-м членом последовательности</i>, 
             а порядковый номер члена последовательности - его <i>индексом</i>.
         </p>
@@ -72,6 +72,25 @@
         <p>
             Если <span class="tex">a \in M</span> является пределом последовательности <span class="tex">x^{(n)}</span>,
             то пишут <span class="tex">\underset{n \to \infty}{lim} \ x^{(n)} = a</span>.
+        </p>
+        
+        <p>
+            <b>Пример.</b> Пусть <span class="tex">M \subset \mathbb{R}, M</span>
+            - метрическое пространство с метрикой <span class="tex">\rho (x, y) = \left| x - y \right|</span>.
+            Рассмотрим последовательность <span class="tex">x^{(n)} = \frac{1}{n}</span>.
+
+            <ul>
+                <li>
+                    Если <span class="tex">M = \mathbb{Q}</span>, то в этом метрическом 
+                    пространстве <span class="tex">\exists \underset{n \to \infty}{lim} x^{(n)} = 0 \in M</span>.
+                </li>
+                <li>
+                    Если <span class="tex">M = \left\{ \alpha \in \mathbb{R} : 0 \lt \alpha \lt +\infty \right\}</span>,
+                    то у последовательности <span class="tex">x^{(n)}</span> нет предела в этом метрическом пространстве.
+                    Нет элемента <span class="tex">a \in M</span> такого, что 
+                    <span class="tex">\rho (x^{(n)}, a) \underset{n \to \infty }{\longrightarrow} 0</span>.
+                </li>
+            </ul>
         </p>
 
         <p>
@@ -131,8 +150,45 @@
                     </p>
 
                     <p>
-                        Получим, что если последовательность имеет несколько пределов, то они необходимо равны. Это утверждение доказывает теорему.
+                        Получим, что если два элемента являются пределами последовательности, то они необходимо равны. 
+                        Это утверждение доказывает теорему.
                     </p>
+                </div>
+            </div>
+        </p>
+
+        <p>
+            <b>Лемма.</b> Если
+
+            <ol>
+                <li>
+                    <span class="tex">M_{\rho} = \mathbb{R}^n</span> - метрическое пространство,
+                    <span class="tex">\rho (x, y) = \sqrt{\sum_{i=1}^{n} \left| x_i-y_i \right|^{2}}</span>
+                </li>
+                <li>
+                    <span class="tex">x^{(k)}</span> - произвольная последовательность.
+                    <span class="tex">x^{(k)} = (x^{(k)}_1, \dots, x^{(k)}_n)</span>
+                </li>
+                <li>
+                    <span class="tex">a = (a_1, \dots, a_n) \in M</span>.
+                    a - элемент из множества <span class="tex">M</span>.
+                </li>
+            </ol>
+            Тогда
+
+            <span class="tex">
+                \ {\exists \underset{k \to \infty}{lim} x^{(k)} = a} \Leftrightarrow 
+                {\forall i = 1, ..., n} \ \ {\exists \underset{k \to \infty}{lim} x^{(k)}_i = a_i}
+            </span>.
+
+            <div class="proof" style="margin-top: 15px;">
+                <div class="head">
+                    <div class="icon"></div>
+                    <div class="title">Док-во (не открывайте сразу; сначала подумайте сами!)</div>
+                </div>
+                <div class="content">
+                    <span class="tex">\Rightarrow</span> Пусть 
+                    <span class="tex">{\exists \underset{k \to \infty}{lim} x^{(k)} = a}</span>. Тогда
                 </div>
             </div>
         </p>
