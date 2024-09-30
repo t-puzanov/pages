@@ -6,7 +6,7 @@
 
 body {
     background-color: #ffffff;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 h1, h2, h3 {
@@ -67,10 +67,14 @@ p.t-large > .tag {
 }
 
 p.t-middle {
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     padding: 2px 0px;
     overflow-x: auto;
+}
+
+p.t-middle * {
+    text-align: start;
 }
 
 p.t-middle > span.tex {
