@@ -73,8 +73,8 @@ p.t-middle {
     overflow-x: auto;
 }
 
-p.t-middle * {
-    text-align: start;
+p.t-middle .katex-display {
+    text-align: start !important;
 }
 
 p.t-middle > span.tex {
