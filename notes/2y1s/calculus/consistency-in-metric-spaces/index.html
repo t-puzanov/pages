@@ -146,7 +146,7 @@
 
                     <p>
                         Из последнего следует, что <span class="tex">\rho ({\color{blue} a}, {\color{red} b}) = 0</span>
-                        <span class="tex">\Leftrightarrow {\color{blue} a} = {\color{red} b}</span>.
+                        и <span class="tex">{\color{blue} a} = {\color{red} b}</span>.
                     </p>
 
                     <p>
@@ -163,7 +163,7 @@
             <ol>
                 <li>
                     <span class="tex">M_{\rho} = \mathbb{R}^n</span> - метрическое пространство,
-                    <span class="tex">\rho (x, y) = \sqrt{\sum_{i=1}^{n} \left| x_i-y_i \right|^{2}}</span>
+                    <span class="tex">\rho (x, y) = \left\| x - y \right\|</span>
                 </li>
                 <li>
                     <span class="tex">x^{(k)}</span> - произвольная последовательность.
@@ -187,8 +187,80 @@
                     <div class="title">Док-во (не открывайте сразу; сначала подумайте сами!)</div>
                 </div>
                 <div class="content">
-                    <span class="tex">\Rightarrow</span> Пусть 
-                    <span class="tex">{\exists \underset{k \to \infty}{lim} x^{(k)} = a}</span>. Тогда
+                    <br><span class="tex">\Rightarrow</span> Пусть 
+                    <span class="tex">{\exists \underset{k \to \infty}{lim} x^{(k)} = a}</span>. <br><br>
+                    В конечномерном пространстве любые две нормы являются 
+                    <a href="../metric-spaces/index.html#normalized-spaces" class="href">эквивалентными</a>. 
+                    Следовательно, норма <span class="tex">\left\| \cdot \right\|</span> эквивалентна евклидовой норме,
+                    в частности верно, что
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            {\exists \ {\color{blue} C} \in \mathbb{R}} : \forall z \in M_{\rho} \ \
+                            {\color{blue} C} \cdot \left\| z \right\| \ge \sqrt{\sum_{i=1}^{n} z_i^2}
+                        </span>
+                    </p>
+
+                    Также заметим, что 
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            {\forall z \in M_{\rho}} \ \ {\forall j \in 1,...,n } \ \
+                            \sqrt{\sum_{i=1}^{n} z_i^2} \ge \sqrt{z_j^2} = \left| z_j \right|
+                        </span>
+                    </p>
+
+                    Исходя из сказанного выше, можно сделать вывод, что
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            {\forall {\color{orange} k} \in \mathbb{N}} \ \ {\forall j \in 1,...,n } \ \ \
+                            {\color{blue} C} \cdot \left\| x^{({\color{orange} k})} - a \right\| \ge 
+                            \sqrt{\sum_{i=1}^{n} {(x_i^{({\color{orange} k})} - a_i)}^2} \ge
+                            \left| x_j^{({\color{orange} k})} - a_j \right| \ge 0
+                        </span>
+                    </p>
+
+                    Из того, что <span class="tex">{\underset{k \to \infty}{lim} x^{(k)} = a}</span>, 
+                    следует, что 
+                    
+                    <span class="tex">
+                        {\color{blue} C} \cdot \left\| x^{({\color{orange} k})} - a \right\| 
+                        \underset{{\color{orange} k} \to +\infty}{\longrightarrow } 0
+                    </span>
+
+                    <p>
+                        По теореме о двух милиционерах из неравенства выше следует, что
+
+                        <p class="t-middle" style="margin: 0px; padding: 0px;">
+                            <span class="tex dmode">
+                                \left| x_j^{({\color{orange} k})} - a_j \right|
+                                \underset{{\color{orange} k} \to +\infty}{\longrightarrow } 0
+                            </span>
+                        </p>
+                    </p>
+
+                    Значит
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            x_j^{({\color{orange} k})}
+                            \underset{{\color{orange} k} \to +\infty}{\longrightarrow } a_j
+                        </span>
+                    </p>
+
+                    <p>
+                        Получим, что 
+
+                        <p class="t-middle" style="margin: 0px; padding: 0px;">
+                            <span class="tex dmode">
+                                \forall j = 1,...,n \ \
+                                {\exists \underset{k \to \infty}{lim} x^{(k)}_j = a_j}
+                            </span>
+                        </p>
+                    </p>
+
+                    <!-- <a href="../metric-spaces/index.html#normalized-spaces" class="href">Тык</a> -->
                 </div>
             </div>
         </p>
