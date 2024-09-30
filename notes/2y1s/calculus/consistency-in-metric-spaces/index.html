@@ -20,7 +20,7 @@
             <a href="https://t-puzanov.github.io/pages/notes/2y1s/calculus/" class="item">Мат. анализ</a>
         </div>
 
-        <h1>1.2 Послед&shy;ователь&shy;ности в мет&shy;ричес&shy;ких прост&shy;ранст&shy;вах</h1>
+        <h1>1.2 По&shy;сле&shy;до&shy;ва&shy;тель&shy;ности в мет&shy;ричес&shy;ких про&shy;странст&shy;вах</h1>
 
         <div class="authors">
             <div class="title">Авторы:</div>
@@ -150,7 +150,7 @@
                     </p>
 
                     <p>
-                        Получим, что если два элемента являются пределами последовательности, то они необходимо равны. 
+                        Получим, что если два элемента являются пределами последовательности, то они равны. 
                         Это утверждение доказывает теорему.
                     </p>
                 </div>
@@ -158,7 +158,7 @@
         </p>
 
         <p>
-            <b>Лемма.</b> Если
+            <b>Теорема.</b> Если
 
             <ol>
                 <li>
@@ -187,9 +187,10 @@
                     <div class="title">Док-во (не открывайте сразу; сначала подумайте сами!)</div>
                 </div>
                 <div class="content">
-                    <br><span class="tex">\Rightarrow</span> Пусть 
-                    <span class="tex">{\exists \underset{k \to \infty}{lim} x^{(k)} = a}</span>. <br><br>
-                    В конечномерном пространстве любые две нормы являются 
+                    <br>
+                    <b>Докажем необходимость.</b><br><br>
+                    Пусть <span class="tex">{\exists \underset{k \to \infty}{lim} x^{(k)} = a}</span>. <br><br>
+                    В конечномерном пространстве две любые нормы являются 
                     <a href="../metric-spaces/index.html#normalized-spaces" class="href">эквивалентными</a>. 
                     Следовательно, норма <span class="tex">\left\| \cdot \right\|</span> эквивалентна евклидовой норме,
                     в частности верно, что
@@ -258,6 +259,62 @@
                                 {\exists \underset{k \to \infty}{lim} x^{(k)}_j = a_j}
                             </span>
                         </p>
+                    </p>
+
+                    <b>Докажем достаточность.</b> <br><br>
+
+                    Пусть <span class="tex">{\forall i = 1, ..., n} \ \ {\exists \underset{k \to \infty}{lim} x^{(k)}_i = a_i}</span>. <br><br>
+
+                    Тогда <span class="tex">{\forall i = 1, ..., n} \ \ {\exists \underset{k \to \infty}{lim} (x^{(k)}_i - a_i) = 0}</span>.
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            \underset{{\color{orange} k} \to \infty}{lim}
+                            \left( \sqrt{\sum_{i=1}^{n} {(x_i^{({\color{orange} k})} - a_i)}^2} \right)
+                            = \sqrt{\sum_{i=1}^{n} {\left(\underset{{\color{orange} k} \to \infty}{lim}
+                            \left( x_i^{({\color{orange} k})} - a_i \right) \right)}^2} = 0
+                        </span>
+                    </p>
+
+                    <p>
+                        Получим, что при <span class="tex">{\color{orange} k} \to \infty</span> выражение
+                    </p>
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            \sqrt{\sum_{i=1}^{n} {(x_i^{({\color{orange} k})} - a_i)}^2}
+                            \underset{{\color{orange} k} \to \infty}{\longrightarrow} 0
+                        </span>
+                    </p>
+
+                    <p>
+                        Вновь воспользуемся эквивалентностью <span class="tex">\left\| \cdot \right\|</span>
+                        и евклидовой нормы.
+                    </p>
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            {\exists \ {\color{blue} C} \in \mathbb{R}} : \forall {\color{orange} k} \in \mathbb{R} \ \
+                            {\color{blue} C} \sqrt{\sum_{i=1}^{n} {(x_i^{({\color{orange} k})} - a_i)}^2} \ge 
+                            \left\| {(x^{({\color{orange} k})} - a)} \right\| \ge 0
+                        </span>
+                    </p>
+
+                    <p>По теореме о двух милиционерах </p>
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            \exists \underset{{\color{orange} k} \to \infty}{lim}
+                            \left( \left\| {(x^{({\color{orange} k})} - a)} \right\| \right) = 0
+                        </span>
+                    </p>
+
+                    Получим, что
+
+                    <p class="t-middle" style="margin: 0px; padding: 0px;">
+                        <span class="tex dmode">
+                            {\exists \underset{{\color{orange} k} \to \infty}{lim} x^{({\color{orange} k})} = a}
+                        </span>
                     </p>
 
                     <!-- <a href="../metric-spaces/index.html#normalized-spaces" class="href">Тык</a> -->
